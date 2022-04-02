@@ -77,6 +77,21 @@ Corresponding output:
   - A `cancer` sequence which has a different length from the `normal` sequence
   - A non-character or empty argument
  
- 
+**Example**
 
+Input:
 
+```R
+findSNPs(
+  cancer = "ATGCGCTA",
+  normal = "ATGCTCTT"
+)
+```
+
+Output:
+
+```R
+#   position cancer normal
+# 1        5      G      T
+# 2        8      A      T
+```
