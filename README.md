@@ -30,7 +30,7 @@ source("utils.R")
 
 This will give her access to the functions you wrote -- she will then use them to complete her analysis. In order to successfully complete this assignment, you will need to create all the following functions:
 
-#### Task \#1: A Universal Gene ID Converter
+#### Task 1: A Universal Gene ID Converter
 
 **Premise**: While we often refer to genes by their "symbols" (e.g., TP53, BRCA1), these symbols can change over time based on the decisions of the [HGNC](https://www.genenames.org/). To ensure consistency, we usually perform most analyses using "Gene IDs" and then convert to symbols for presentation/visualization purposes. In this instance, your supervisor has aggregated genomic data from multiple different databases, so there are two different types of gene IDs she needs to convert to symbols: (1) Ensemble gene IDs (E.g., [ENSG00000147889](http://useast.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000147889;r=9:21967752-21995301)) and (2) Entrez gene IDs (E.g., [8243](https://www.ncbi.nlm.nih.gov/gene/8243)). She needs you to write a function that accepts multiple gene IDs and converts them to symbols.
 
@@ -59,7 +59,7 @@ Corresponding output:
 # [1] "SMC1A"
 ```
 
-#### Task \#2: SNP identification
+#### Task 2: SNP identification
 
 **Premise**: Your supervisor wants to identify [single nucleotide polymorphisms (SNPs)](https://www.genome.gov/genetics-glossary/Single-Nucleotide-Polymorphisms.) in a tumor genome compared to a matched control sample from the same patient. She needs you to write a function that take two DNA sequences and identify the places in which the bases are altered.
 
@@ -95,3 +95,17 @@ Output:
 # 1        5      G      T
 # 2        8      A      T
 ```
+
+
+#### Task 3: 
+
+**Premise**: Your supervisor now needs assistance with another crucial task: converting sequencing data to protein data. She says that this is a crucial step in testing the impact of a SNP on the resulting protein. She asks you to write a function that will convert a DNA sequence into a protein sequence. 
+
+NOTE: For additional background on the conversion of DNA to protein, see the following resource:
+
+
+
+
+
+
+
