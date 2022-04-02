@@ -30,7 +30,7 @@ source("utils.R")
 
 This will give her access to the functions you wrote -- she will then use them to complete her analysis. In order to successfully complete this assignment, you will need to create all the following functions:
 
-#### 1. A Universal Gene ID Converter
+#### Task \#1: A Universal Gene ID Converter
 
 **Premise**: While we often refer to genes by their "symbols" (e.g., TP53, BRCA1), these symbols can change over time based on the decisions of the [HGNC](https://www.genenames.org/). To ensure consistency, we usually perform most analyses using "Gene IDs" and then convert to symbols for presentation/visualization purposes. In this instance, your supervisor has aggregated genomic data from multiple different databases, so there are two different types of gene IDs she needs to convert to symbols: (1) Ensemble gene IDs (E.g., [ENSG00000147889](http://useast.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000147889;r=9:21967752-21995301)) and (2) Entrez gene IDs (E.g., [8243](https://www.ncbi.nlm.nih.gov/gene/8243)). She needs you to write a function that accepts multiple gene IDs and converts them to symbols.
 
@@ -58,5 +58,25 @@ Corresponding output:
 # $`8243`
 # [1] "SMC1A"
 ```
+
+#### Task \#2: SNP identification
+
+**Premise**: Your supervisor wants to identify [single nucleotide polymorphisms (SNPs)](https://www.genome.gov/genetics-glossary/Single-Nucleotide-Polymorphisms.) in a tumor genome compared to a matched control sample from the same patient. She needs you to write a function that take two DNA sequences and identify the places in which the bases are altered.
+
+**Requirements**:
+1. **Name**: Needs to be an R function called `findSNPs()`
+2. **Arguments**: 
+  - `cancer`: A `character` string containing the tumor DNA sequence
+  - `normal`: A `character` string containing the normal tissue DNA sequence
+3. **Returns**: An `data.frame` which contains the following columns:
+  - `position`: gives the position of an alteration within the input sequence
+  - `cancer`: gives the cancer base at that position
+  - `normal`: gives the normal base at that position
+4. **Errors**: Should produce an error if the user attempts to supply any of the following:
+  - A sequence that contains incorrect genomic bases (anything not in "A", "T", "G", or "C")
+  - A `cancer` sequence which has a different length from the `normal` sequence
+  - A non-character or empty argument
+ 
+ 
 
 
