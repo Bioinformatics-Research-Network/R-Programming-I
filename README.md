@@ -18,7 +18,6 @@ You can always visit Henry's office hours ([link](https://calendly.com/millerh1/
 
 **Premise**: You are a new bioinformatics programmer in a population genomics laboratory studying the relationship between gene mutations and cancer progression. The senior bioinformatician needs your help analyzing mutations found in the tumors of breast cancer patients. She asks you to **write an R script** which contains functions needed for the analysis. 
 
-### Tasks
 
 Your supervisor needs you to **write an R script** called `utils.R` which contains functions that will help her analyze cancer gene mutations. 
 
@@ -30,7 +29,7 @@ source("utils.R")
 
 This will give her access to the functions you wrote -- she will then use them to complete her analysis. In order to successfully complete this assignment, you will need to create all the following functions:
 
-#### Task 1: A Universal Gene ID Converter
+### Task 1: A Universal Gene ID Converter
 
 **Premise**: While we often refer to genes by their "symbols" (e.g., TP53, BRCA1), these symbols can change over time based on the decisions of the [HGNC](https://www.genenames.org/). To ensure consistency, we usually perform most analyses using "Gene IDs" and then convert to symbols for presentation/visualization purposes. In this instance, your supervisor has aggregated genomic data from multiple different databases, so there are two different types of gene IDs she needs to convert to symbols: (1) Ensemble gene IDs (E.g., [ENSG00000147889](http://useast.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000147889;r=9:21967752-21995301)) and (2) Entrez gene IDs (E.g., [8243](https://www.ncbi.nlm.nih.gov/gene/8243)). She needs you to write a function that accepts multiple gene IDs and converts them to symbols.
 
@@ -59,7 +58,7 @@ Corresponding output:
 # [1] "SMC1A"
 ```
 
-#### Task 2: SNP identification
+### Task 2: SNP identification
 
 **Premise**: Your supervisor wants to identify [single nucleotide polymorphisms (SNPs)](https://www.genome.gov/genetics-glossary/Single-Nucleotide-Polymorphisms.) in a tumor genome compared to a matched control sample from the same patient. She needs you to write a function that take two DNA sequences and identify the places in which the bases are altered.
 
@@ -97,14 +96,66 @@ Output:
 ```
 
 
-#### Task 3: 
+### Task 3: Conversion to RNA
 
-**Premise**: Your supervisor now needs assistance with another crucial task: converting sequencing data to protein data. She says that this is a crucial step in testing the impact of a SNP on the resulting protein. She asks you to write a function that will convert a DNA sequence into a protein sequence. 
+**Premise**: Your supervisor now needs assistance with another crucial task: converting DNA sequences to RNA. She says that this is a crucial step in testing the impact of SNPs on the resulting protein. She asks you to write a function, `transcribe()`, which takes a DNA sequence and returns the RNA sequence which would be transcribed from it.
 
-NOTE: For additional background on the conversion of DNA to protein, see the following resource:
+NOTE: For additional background on the transcription of DNA to RNA, see the following resource: [Khan Acadmy](https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/transcription-and-rna-processing/a/overview-of-transcription).
 
+**Requirements**:
+1. **Name**: Needs to be an R function called `transcribe()`
+2. **Arguments**: 
+  - `sequence`: The DNA sequence to be translated (`character`)
+3. **Returns**: The corresponding RNA sequence as a `character`. Assume the DNA is in the 3->5 orientation (template strand) and return the resulting RNA in the 5->3 orientation. 
+4. **Errors**: Should produce an error if the user attempts to supply any of the following:
+  - A sequence that contains incorrect genomic bases (anything not in "A", "T", "G", or "C")
+  - A non-character or empty argument
+ 
+**Example**
 
+Input:
 
+```R
+transcribe("AAAGTCGAGGTGTAGATCAAACCC")
+```
+
+Output:
+
+```R
+# "UUUCAGCUCCACAUCUAGUUUGGG"
+```
+
+### Task 4: Conversion to protein
+
+**Premise**: Your supervisor now needs assistance with another crucial task: converting sequencing data to protein data. She says that this is a crucial step in testing the impact of a SNP on the resulting protein. She asks you to write a function that will convert an RNA sequence into a protein sequence. To aid you in this task, she has provided a key, `codon_translate_key.csv`, which gives the mapping between three-base codons and amino acids.
+
+NOTE: For additional background on the conversion of RNA to protein, see the following resource: [Khan Academy](https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/translation/a/translation-overview)
+
+**Requirements**:
+1. **Name**: Needs to be an R function called `translate()`
+2. **Arguments**: 
+  - `sequence`: The DNA sequence to be translated (`character`)
+3. **Returns**: The corresponding protein sequence as a `character`. Stop codons should be indicated by "\*".
+4. **Errors**: Should produce an error if the user attempts to supply any of the following:
+  - A sequence that contains incorrect genomic bases (anything not in "A", "T", "G", or "C")
+  - A non-character or empty argument
+  - If the sequence contains a number of bases not divisible by 3
+ 
+**Example**
+
+Input:
+
+```R
+translate("UUUCAGCUCCACAUCUAGUUUGGG")
+```
+
+Output:
+
+```R
+# "FQLHI*FG"
+```
+
+### Task 5: Determine the impact of SNPs on protein sequence
 
 
 
