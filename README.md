@@ -1,6 +1,14 @@
 # R Programming I
 
-[![](https://img.shields.io/static/v1?label=Classroom&message=Launch&color=blue&logo=GitHub)](https://classroom.github.com/a/RtJ1PXh2)
+[![](https://img.shields.io/static/v1?label=Classroom&message=Launch&color=blue&logo=GitHub)](https://classroom.github.com/a/cES7R_Dy)
+
+<!---
+Update the badge below as the version changes
+-->
+
+![](https://img.shields.io/static/v1?label=Version&message=0.0.1a&color=brown)
+
+
 
 This skill assessment will test your fundamental R programming skills. 
 
