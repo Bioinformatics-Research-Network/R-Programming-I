@@ -49,7 +49,7 @@ You can always visit Henry's office hours ([link](https://calendly.com/millerh1/
 
 **Premise**: You are a new bioinformatics programmer in a population genomics laboratory studying the relationship between gene mutations and cancer progression. The senior bioinformatician needs your help analyzing mutations found in the tumors of breast cancer patients. She asks you to **write an R script** named `utils.R` which contains functions needed for the analysis. 
 
-In order to successfully complete this assignment, you will need to complete all the following tasks.
+The following tasks describe the functions that should be included in `utils.R`.
 
 ### Task 1: A Universal Gene ID Converter
 
