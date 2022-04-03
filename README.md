@@ -1,6 +1,6 @@
 # R Programming I
 
-[![](https://img.shields.io/static/v1?label=Classroom&message=Launch&color=blue&logo=GitHub)](www.google.com)
+[![](https://img.shields.io/static/v1?label=Classroom&message=Launch&color=blue&logo=GitHub)](https://classroom.github.com/a/RtJ1PXh2)
 
 This skill assessment will test your fundamental R programming skills. 
 
