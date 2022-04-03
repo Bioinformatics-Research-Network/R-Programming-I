@@ -155,8 +155,88 @@ Output:
 # "FQLHI*FG"
 ```
 
-### Task 5: Determine the impact of SNPs on protein sequence
+### Task 5: Determine the impact of SNPs on protein sequences
+
+**Premise**: Mutations are DNA alterations which cause a change in the resulting protein. Cancers often form as the result of deleterious mutations. Your next task will be to create a function which can identify mutations in cancer DNA sequences compared to matched normal controls. 
+
+**Requirements**:
+1. **Name**: Needs to be an R function called `findMutations()`
+2. **Arguments**: 
+  - `cancer`: A `character` string containing the tumor DNA sequence
+  - `normal`: A `character` string containing the normal tissue DNA sequence
+3. **Returns**: An `data.frame` which contains the following columns:
+  - `codon_number`: gives the position of an altered codon within the input sequence
+  - `cancer`: gives the cancer amino acid at that position
+  - `normal`: gives the normal amino acid at that position
+4. **Errors**: Should produce an error if the user attempts to supply any of the following:
+  - A sequence that contains incorrect genomic bases (anything not in "A", "T", "G", or "C")
+  - A `cancer` sequence which has a different length from the `normal` sequence
+  - A non-character or empty argument
+ 
+**Example**
+
+Input:
+
+```R
+findMutations(
+  cancer = "AAAGTGGAGGTGTAGATCAAACCC",
+  normal = "AAAGTCGAGGTGTAGATGAAACCC"
+)
+```
+
+Output:
+
+```R
+#   position cancer normal
+# 1        2      H      Q
+# 2        6      *      Y
+```
+
+### Task 6: Find tumor suppressor genes with nonsense mutations
+
+**Premise**: In some cases, SNPs can lead to a premature STOP codon. This is called a "nonsense mutation", and it will result in a shorter ("truncated") version of the protein which may be non-functional. Your supervisor has hypothesized that breast cancer might be a result of nonsense mutations in tumor-suppressing genes, such as TP53 and BRCA1. To help test this hypothesis, she asks you to write a function which can identify the nonsense mutations in matched tumor and normal sequences for several genes of interest.
+
+NOTE: For additional background on mutations, see the following resource: [Khan Academy](https://www.khanacademy.org/test-prep/mcat/biomolecules/genetic-mutations/v/the-different-types-of-mutations)
 
 
+**Requirements**:
+1. **Name**: Needs to be an R function called `findNonsense()`
+2. **Arguments**: 
+  - `sequences`: a `data.frame` containing three columns: 
+    - `gene_id`: The ID of the gene (can be either Ensembl or Entrez)
+    - `cancer`: The sequence of the gene in the cancer sample
+    - `normal`: The sequence of the gene in the normal sample
+3. **Returns**: a `data.frame` with one entry per nonsense mutation, containing the following columns:
+  - `gene_id`: The gene ID originally provided by the user for this gene
+  - `gene_symbol`: The symbol of the supplied gene
+  - `codon_number`: gives the position of an altered codon within the input sequence
+  - `cancer`: gives the cancer amino acid at that position
+  - `normal`: gives the normal amino acid at that position
+4. **Errors**: Should produce an error if the user attempts to supply any of the following:
+  - A sequence that contains incorrect genomic bases (anything not in "A", "T", "G", or "C")
+  - A non-character or empty argument
+  - If either DNA sequence contains a number of bases not divisible by 3
+ 
+**Example**
+
+Input:
+
+```R
+sequences <- data.frame(
+  gene_id = c("ENSG00000147889", 8243, 675),
+  cancer = c("AAAGTGGAGGTGTAGATCAAACCC", "CATATCCTGATCGGCCTGATCGGGAGG", "AGGGCTTTTACCCAGCATTGA"),
+  normal = c("AAAGTCGAGGTGTAGATGAAACCC", "CATAGCCTGATCGGCCTGAGCGGGAGG", "AGGGCTTTTACCCAGGATTGA")
+)
+findNonsense(sequences)
+```
+
+Output:
+
+```R
+#            gene_id symbol codon_number cancer normal
+# 2  ENSG00000147889 CDKN2A            6      *      Y
+# 1             8243  SMC1A            2      *      S
+# 21            8243  SMC1A            7      *      S
+```
 
 
