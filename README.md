@@ -16,11 +16,6 @@ You can always visit Henry's office hours ([link](https://calendly.com/millerh1/
 
 ## Instructions
 
-<<<<<<< HEAD
-**Premise**: You are a new bioinformatics programmer in a population genomics laboratory studying the relationship between gene mutations and cancer progression. The senior 
-
-
-=======
 **Premise**: You are a new bioinformatics programmer in a population genomics laboratory studying the relationship between gene mutations and cancer progression. The senior bioinformatician needs your help analyzing mutations found in the tumors of breast cancer patients. She asks you to **write an R script** which contains functions needed for the analysis. 
 
 
@@ -243,6 +238,4 @@ Output:
 # 1             8243  SMC1A            2      *      S
 # 21            8243  SMC1A            7      *      S
 ```
-
->>>>>>> 7226f8c81824c398f51dd7335cb3fc01cf6940d0
 
