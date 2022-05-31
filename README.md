@@ -47,8 +47,17 @@ _The following **tasks** describe the **functions** that should be included in `
 
 ### Task 1: A Universal Gene ID Converter
 
-**Premise**: While we often refer to genes by their "symbols" (e.g., TP53, BRCA1), these symbols can change over time. To ensure consistency, bioinformaticians often use "Gene IDs", and then they convert IDs to gene symbols for presentation/visualization purposes. Your supervisor has aggregated genomic data from multiple different databases with two different types of gene IDs: (1) Ensemble gene IDs (E.g., [ENSG00000147889](http://useast.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000147889;r=9:21967752-21995301)) and (2) Entrez gene IDs (E.g., [8243](https://www.ncbi.nlm.nih.gov/gene/8243)). 
+<details>
+<summary>Premise</summary>
+
+<hr>
+
+While we often refer to genes by their "symbols" (e.g., TP53, BRCA1), these symbols can change over time. To ensure consistency, bioinformaticians often use "Gene IDs", and then they convert IDs to gene symbols for presentation/visualization purposes. Your supervisor has aggregated genomic data from multiple different databases with two different types of gene IDs: (1) Ensemble gene IDs (E.g., [ENSG00000147889](http://useast.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000147889;r=9:21967752-21995301)) and (2) Entrez gene IDs (E.g., [8243](https://www.ncbi.nlm.nih.gov/gene/8243)). 
 She needs you to write a function that accepts multiple gene IDs and converts them to gene symbols. Fortunately, your supervisor has provided you with a CSV file (`gene_id_to_symbol.csv`) that contains the mapping between IDs of various types and gene symbols.
+
+<hr>
+
+</details>
  
 **Specific Requirements**:
 
