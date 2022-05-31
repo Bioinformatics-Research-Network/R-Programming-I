@@ -70,6 +70,8 @@ She needs you to write a function that accepts multiple gene IDs and converts th
 <details>
 <summary>Examples</summary>
 
+<hr>
+
 **Example 1**
 
 Usage:
@@ -102,6 +104,8 @@ Output (error message may vary):
 ```R
 # Error: Input contains invalid gene IDs: "NOT-A-VALID-ID"
 ```
+
+<hr>
 
 </details>
 
@@ -137,6 +141,7 @@ The senior bioinformatician has hypothesized that [single nucleotide variants (S
 <details>
 <summary>Examples</summary>
  
+ <hr>
 
 **Example 1**
 
@@ -174,6 +179,8 @@ Output (error text may vary):
 # Error: Sequences should be the same length.
 ```
 
+<hr>
+
 </details>
 
 
@@ -203,6 +210,8 @@ Your supervisor now needs assistance with another crucial task: converting DNA s
 <details>
 <summary>Examples</summary>
 
+<hr>
+
 **Example 1**
 
 Input:
@@ -230,6 +239,8 @@ Output (error text may vary):
 ```R
 # Error: Invalid bases provided: "_" - should be one of "A", "T", "G", "C" 
 ```
+
+<hr>
 
 </details>
 
@@ -260,6 +271,8 @@ Your supervisor now needs your help converting the RNA sequences to protein sequ
 <details>
 <summary>Examples</summary>
 
+<hr>
+
 **Example 1**
 
 Input:
@@ -287,6 +300,8 @@ Output (error text may vary):
 ```R
 # Error: Input sequence not evenly divisible by 3.
 ```
+
+<hr>
 
 </details>
 
@@ -324,6 +339,8 @@ Thus far, you have built functions to identify variants and convert between DNA,
 <details>
 <summary>Examples</summary>
 
+<hr>
+
 **Example 1**
 
 Input:
@@ -360,6 +377,8 @@ Output (error text may vary):
 ```R
 # Error: Sequences should be the same length.
 ```
+
+<hr>
 
 </details>
 
@@ -399,6 +418,8 @@ In some cases, SNVs can lead to a premature STOP codon. This is called a ["nonse
  
 <details>
 <summary>Examples</summary>
+
+<hr>
  
 **Example 1**
 
@@ -441,9 +462,9 @@ Output (error text may vary):
 # Error: "NOT-A-GENE" is not a valid gene.
 ```
 
-</details>
+<hr>
 
-<br>
+</details>
 
 
 ## Guidance
