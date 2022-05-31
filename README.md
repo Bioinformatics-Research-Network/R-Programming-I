@@ -41,9 +41,9 @@ Good luck and have fun! 😊
 
 **Assessment Premise**: 
 
-You are a new bioinformatics programmer 🤓 in the Genomics Division @ BioResLabs INC 🏢. Your role is to study the link between mutations and cancer 🧬. The senior bioinformatician needs your help analyzing mutations in breast cancer tumors 💻. She asks you to **write an R script** called `utils.R` which contains functions needed for the analysis.
+You are a new bioinformatics programmer 🤓 in the Genomics Division at BioResLabs INC 🏢. Your role is to study the link between mutations and cancer 🧬. The senior bioinformatician needs your help analyzing mutations in breast cancer tumors 💻. She asks you to **write an R script** called `utils.R` which contains functions needed for the analysis.
 
-_The following **tasks** describe the **functions** that should be included in `utils.R`._
+_The following tasks describe the functions that should be included in `utils.R`._
 
 ### Task 1: A Universal Gene ID Converter
 
