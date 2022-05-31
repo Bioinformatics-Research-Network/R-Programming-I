@@ -1,7 +1,7 @@
 library(testthat)
 
 setwd("../")
-source("utils.R")
+source("../utils.R")
 
 test_that("Task #1 correct", {
   
