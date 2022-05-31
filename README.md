@@ -108,7 +108,16 @@ Output (error message may vary):
 
 ### Task 2: Variant identification
 
-**Premise**: The senior bioinformatician has hypothesized that [single nucleotide variants (SNVs)](https://www.cancer.gov/publications/dictionaries/genetics-dictionary/def/single-nucleotide-variant) in [tumor-suppressor genes](https://www.genome.gov/genetics-glossary/Tumor-Suppressor-Gene) may cause breast cancer to develop. To test this theory, she has mined multiple databases to obtain genome sequences of matched tumor and normal tissue samples. She has now tasked you with writing a function that will identify SNVs in the breast tumors compared to the healthy control tissue. To do this, you will need to write a function (`find_snvs()`) that takes two sequences (one 'cancer' and one 'normal') and identifies the positions in which the sequence is altered.
+<details>
+<summary>Premise</summary>
+
+<hr>
+
+The senior bioinformatician has hypothesized that [single nucleotide variants (SNVs)](https://www.cancer.gov/publications/dictionaries/genetics-dictionary/def/single-nucleotide-variant) in [tumor-suppressor genes](https://www.genome.gov/genetics-glossary/Tumor-Suppressor-Gene) may cause breast cancer to develop. To test this theory, she has mined multiple databases to obtain genome sequences of matched tumor and normal tissue samples. She has now tasked you with writing a function that will identify SNVs in the breast tumors compared to the healthy control tissue. To do this, you will need to write a function (`find_snvs()`) that takes two sequences (one 'cancer' and one 'normal') and identifies the positions in which the sequence is altered.
+
+<hr>
+
+</details>
 
 **Specific Requirements**:
 
@@ -170,7 +179,16 @@ Output (error text may vary):
 
 ### Task 3: Conversion to RNA (transcription)
 
-**Premise**: Your supervisor now needs assistance with another crucial task: converting DNA sequences to RNA. She explains that this is a crucial step in eventually testing the impact of SNVs on protein sequences. She asks you to write a function, `transcribe()`, which takes a  DNA sequence and returns the RNA sequence that would be transcribed from it.
+<details>
+<summary>Premise</summary>
+
+<hr>
+
+Your supervisor now needs assistance with another crucial task: converting DNA sequences to RNA. She explains that this is a crucial step in eventually testing the impact of SNVs on protein sequences. She asks you to write a function, `transcribe()`, which takes a  DNA sequence and returns the RNA sequence that would be transcribed from it.
+
+<hr>
+
+</details>
 
 **Specific Requirements**:
 
@@ -217,7 +235,16 @@ Output (error text may vary):
 
 ### Task 4: Conversion to protein (translation)
 
-**Premise**: Your supervisor now needs your help converting the RNA sequences to protein sequences. To aid you in this task, she has provided a key, `codon_translate_key.csv`, which gives the mapping between three-base RNA codons and the amino acids of the resulting protein.
+<details>
+<summary>Premise</summary>
+
+<hr>
+
+Your supervisor now needs your help converting the RNA sequences to protein sequences. To aid you in this task, she has provided a key, `codon_translate_key.csv`, which gives the mapping between three-base RNA codons and the amino acids of the resulting protein.
+
+<hr>
+
+</details>
 
 **Specific Requirements**:
 
@@ -266,7 +293,18 @@ Output (error text may vary):
 
 ### Task 5: Determine the impact of SNVs on protein sequences
 
-**Premise**: Thus far, you have built functions to identify variants and convert between DNA, RNA, and protein -- good work! Now you are ready to help your supervisor start testing her hypothesis. She asks you to build a new function, `protein_variant()`, which can identify SNVs in cancer samples which result in an altered protein sequence.
+<details>
+<summary>Premise</summary>
+
+<hr>
+
+Thus far, you have built functions to identify variants and convert between DNA, RNA, and protein -- good work! Now you are ready to help your supervisor start testing her hypothesis. She asks you to build a new function, `protein_variant()`, which can identify SNVs in cancer samples which result in an altered protein sequence.
+
+<hr>
+
+</details>
+
+
 
 **Specific Requirements**:
 
@@ -328,7 +366,17 @@ Output (error text may vary):
 
 ### Task 6: Find tumor suppressor genes with nonsense mutations
 
-**Premise**: In some cases, SNVs can lead to a premature STOP codon. This is called a ["nonsense mutation"](https://www.genome.gov/genetics-glossary/Nonsense-Mutation), and it will result in a shorter ("truncated") version of the protein which may be non-functional. Your supervisor has hypothesized that breast cancer might be a result of nonsense mutations in tumor-suppressing genes, such as [TP53](https://www.genecards.org/cgi-bin/carddisp.pl?gene=TP53) and [BRCA1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=BRCA1). To help test this hypothesis, she asks you to write a function which can identify the nonsense mutations in matched tumor and normal sequences across several genes of interest.
+<details>
+<summary>Premise</summary>
+
+<hr>
+
+In some cases, SNVs can lead to a premature STOP codon. This is called a ["nonsense mutation"](https://www.genome.gov/genetics-glossary/Nonsense-Mutation), and it will result in a shorter ("truncated") version of the protein which may be non-functional. Your supervisor has hypothesized that breast cancer might be a result of nonsense mutations in tumor-suppressing genes, such as [TP53](https://www.genecards.org/cgi-bin/carddisp.pl?gene=TP53) and [BRCA1](https://www.genecards.org/cgi-bin/carddisp.pl?gene=BRCA1). To help test this hypothesis, she asks you to write a function which can identify the nonsense mutations in matched tumor and normal sequences across several genes of interest.
+
+<hr>
+
+</details>
+
 
 **Specific Requirements**:
 
